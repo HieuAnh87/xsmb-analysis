@@ -1,0 +1,114 @@
+name: Thu thập kết quả xổ số miền Bắc hàng ngày
+
+"on":
+  schedule:
+    # Chạy lúc 7:00 PM giờ Việt Nam (12:00 PM UTC) mỗi ngày
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Cho phép chạy thủ công
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/lottery-collector.yml'
+      - 'src/**'
+
+env:
+  TZ: Asia/Ho_Chi_Minh
+
+jobs:
+  collect-lottery-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Set timezone to Vietnam
+      run: |
+        sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+        echo "Current time: $(date)"
+
+    - name: Thu thập dữ liệu xổ số
+      id: collect
+      run: |
+        python src/lottery_collector.py
+      env:
+        PYTHONPATH: ${{ github.workspace }}
+
+    - name: Validate collected data
+      run: |
+        python src/data_validator.py
+
+    - name: Generate analytics
+      run: |
+        python src/analytics.py
+
+    - name: Commit and push results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        
+        # Kiểm tra xem có thay đổi nào không
+        if git diff --staged --quiet; then
+          echo "Không có dữ liệu mới để commit"
+        else
+          git commit -m "🎲 Cập nhật kết quả xổ số $(date +'%d/%m/%Y %H:%M')"
+          git push
+        fi
+
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 📊 Báo cáo thu thập dữ liệu xổ số" >> $GITHUB_STEP_SUMMARY
+        echo "**Thời gian:** $(date +'%d/%m/%Y %H:%M:%S')" >> $GITHUB_STEP_SUMMARY
+        echo "**Múi giờ:** Asia/Ho_Chi_Minh" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "data/lottery-results.json" ]; then
+          TOTAL_RECORDS=$(jq length data/lottery-results.json)
+          echo "**Tổng số bản ghi:** $TOTAL_RECORDS" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ "${{ steps.collect.outcome }}" == "success" ]; then
+          echo "✅ **Trạng thái:** Thu thập dữ liệu thành công" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Trạng thái:** Thu thập dữ liệu thất bại" >> $GITHUB_STEP_SUMMARY
+        fi
+
+    - name: Notify on failure
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const issue = await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `❌ Lỗi thu thập dữ liệu xổ số - ${new Date().toLocaleDateString('vi-VN')}`,
+            body: `
+            ## Chi tiết lỗi
+            
+            **Workflow:** ${context.workflow}
+            **Run ID:** ${context.runId}
+            **Thời gian:** ${new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'})}
+            
+            Vui lòng kiểm tra logs để biết thêm chi tiết.
+            
+            [Xem workflow run](${context.payload.repository.html_url}/actions/runs/${context.runId})
+            `,
+            labels: ['bug', 'automated']
+          });
+          
+          console.log(`Created issue #${issue.data.number}`);
