@@ -1,0 +1,26 @@
+# Web scraping và HTTP requests
+requests==2.31.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+selenium==4.15.2
+
+# Data processing và analysis
+pandas==2.1.3
+numpy==1.25.2
+python-dateutil==2.8.2
+
+# JSON và CSV handling
+jsonschema==4.19.2
+
+# Logging và monitoring
+structlog==23.2.0
+
+# Timezone handling
+pytz==2023.3
+
+# Testing (optional)
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Web driver cho Selenium (nếu cần)
+webdriver-manager==4.0.1
