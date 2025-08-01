@@ -1,0 +1,512 @@
+{
+  "generated_at": "2025-08-01T17:56:03.365369",
+  "data_summary": {
+    "total_records": 1,
+    "date_range": {
+      "earliest": "01/08/2025",
+      "latest": "01/08/2025"
+    }
+  },
+  "frequency_analysis": {
+    "total_numbers_drawn": 27,
+    "unique_numbers": 27,
+    "frequency_detail": {
+      "02263": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "68918": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "59574": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "71916": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "89582": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "93774": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "88448": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "57643": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "79724": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "11731": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "1321": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "3999": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "1158": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "5363": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "3771": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "7722": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "2298": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "9296": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "3032": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "8229": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "460": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "834": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "703": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "06": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "61": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "50": {
+        "count": 1,
+        "percentage": 3.7
+      },
+      "11": {
+        "count": 1,
+        "percentage": 3.7
+      }
+    },
+    "most_common": [
+      {
+        "number": "02263",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "68918",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "59574",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "71916",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "89582",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "93774",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "88448",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "57643",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "79724",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "11731",
+        "count": 1,
+        "percentage": 3.7
+      }
+    ],
+    "least_common": [
+      {
+        "number": "9296",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "3032",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "8229",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "460",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "834",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "703",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "06",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "61",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "50",
+        "count": 1,
+        "percentage": 3.7
+      },
+      {
+        "number": "11",
+        "count": 1,
+        "percentage": 3.7
+      }
+    ]
+  },
+  "prize_analysis": {
+    "Giải Đặc Biệt": {
+      "total_numbers": 1,
+      "unique_numbers": 1,
+      "most_common": [
+        {
+          "number": "02263",
+          "count": 1,
+          "percentage": 100.0
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Nhất": {
+      "total_numbers": 1,
+      "unique_numbers": 1,
+      "most_common": [
+        {
+          "number": "68918",
+          "count": 1,
+          "percentage": 100.0
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Nhì": {
+      "total_numbers": 2,
+      "unique_numbers": 2,
+      "most_common": [
+        {
+          "number": "59574",
+          "count": 1,
+          "percentage": 50.0
+        },
+        {
+          "number": "71916",
+          "count": 1,
+          "percentage": 50.0
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Ba": {
+      "total_numbers": 6,
+      "unique_numbers": 6,
+      "most_common": [
+        {
+          "number": "89582",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "93774",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "88448",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "57643",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "79724",
+          "count": 1,
+          "percentage": 16.67
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Tư": {
+      "total_numbers": 4,
+      "unique_numbers": 4,
+      "most_common": [
+        {
+          "number": "1321",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "3999",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "1158",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "5363",
+          "count": 1,
+          "percentage": 25.0
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Năm": {
+      "total_numbers": 6,
+      "unique_numbers": 6,
+      "most_common": [
+        {
+          "number": "3771",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "7722",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "2298",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "9296",
+          "count": 1,
+          "percentage": 16.67
+        },
+        {
+          "number": "3032",
+          "count": 1,
+          "percentage": 16.67
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Sáu": {
+      "total_numbers": 3,
+      "unique_numbers": 3,
+      "most_common": [
+        {
+          "number": "460",
+          "count": 1,
+          "percentage": 33.33
+        },
+        {
+          "number": "834",
+          "count": 1,
+          "percentage": 33.33
+        },
+        {
+          "number": "703",
+          "count": 1,
+          "percentage": 33.33
+        }
+      ],
+      "average_frequency": 1.0
+    },
+    "Giải Bảy": {
+      "total_numbers": 4,
+      "unique_numbers": 4,
+      "most_common": [
+        {
+          "number": "06",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "61",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "50",
+          "count": 1,
+          "percentage": 25.0
+        },
+        {
+          "number": "11",
+          "count": 1,
+          "percentage": 25.0
+        }
+      ],
+      "average_frequency": 1.0
+    }
+  },
+  "pattern_analysis": {
+    "consecutive_numbers": 0,
+    "same_ending_digits": {
+      "3": 4,
+      "8": 4,
+      "4": 4,
+      "6": 3,
+      "2": 3,
+      "1": 5,
+      "9": 2,
+      "0": 2
+    },
+    "sum_analysis": [
+      13,
+      32,
+      30,
+      24,
+      32,
+      30,
+      32,
+      25,
+      29,
+      13,
+      7,
+      30,
+      15,
+      17,
+      18,
+      18,
+      21,
+      26,
+      8,
+      21,
+      10,
+      15,
+      10,
+      6,
+      7,
+      5,
+      2
+    ],
+    "even_odd_ratio": {
+      "even": 16,
+      "odd": 11
+    },
+    "sum_statistics": {
+      "average": 18.37,
+      "min": 2,
+      "max": 32,
+      "most_common_sum": [
+        [
+          32,
+          3
+        ],
+        [
+          30,
+          3
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          15,
+          2
+        ]
+      ]
+    }
+  },
+  "time_trends": {
+    "date_range": {
+      "earliest": "01/08/2025",
+      "latest": "01/08/2025"
+    },
+    "total_draws": 1,
+    "monthly_analysis": {
+      "2025-08": {
+        "draws_count": 1,
+        "total_numbers": 27,
+        "unique_numbers": 27,
+        "most_common": [
+          [
+            "02263",
+            1
+          ],
+          [
+            "68918",
+            1
+          ],
+          [
+            "59574",
+            1
+          ]
+        ]
+      }
+    }
+  }
+}
